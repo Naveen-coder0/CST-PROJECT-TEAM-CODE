@@ -1,0 +1,400 @@
+<!-- Declares this as an HTML5 document -->
+<!DOCTYPE html>
+<!-- Root HTML element with English language attribute -->
+<html lang="en">
+<head>
+    <!-- Sets character encoding to UTF-8 for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Makes the page responsive by setting viewport width and initial zoom level -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Sets the page title shown in browser tab -->
+    <title>FocusBoard - Student Productivity App</title>
+    
+    <!-- Preconnect to Google Fonts domain for faster font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preconnect to Google Fonts static domain for better performance -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Imports the Outfit font family with multiple weights (300, 400, 500, 600, 700) from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Links to external CSS stylesheet for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         👨‍💻 MEMBER 1 — MAKKER
+         🔝 NAVBAR + HEADER
+         ========================================== -->
+
+    <!-- NAVIGATION AND HEADER SECTION - Navigation bar with app title and links -->
+
+    <!-- Navigation bar container with horizontal layout for title and links -->
+    <nav>
+        <!-- App title/logo display in the navbar -->
+        <div class="navbar-title">FocusBoard</div>
+        <!-- Unordered list of navigation links -->
+        <ul class="nav-links">
+            <!-- Dashboard navigation link -->
+            <li><a href="#dashboard">Dashboard</a></li>
+            <!-- Tasks navigation link -->
+            <li><a href="#tasks">Tasks</a></li>
+            <!-- Progress tracking navigation link -->
+            <li><a href="#progress">Progress</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main container with max-width and auto margins for centered layout -->
+    <div class="container">
+        <!-- Large page heading "Dashboard" -->
+        <h1 class="page-title">Dashboard</h1>
+        <!-- Subtitle describing the page purpose -->
+        <p class="page-subtitle">Manage your tasks and track your progress</p>
+
+        <!-- Wrapper that splits the page into main content and sidebar using flexbox -->
+        <div class="content-wrapper">
+
+            <!-- Main left column for primary content (forms and task list) -->
+            <div class="main-column">
+
+                <!-- ==========================================
+                     👨‍💻 MEMBER 2 — NAVEEN
+                     📝 ADD TASK FORM
+                     ========================================== -->
+
+                <!-- FORM SECTION - Add New Task Form -->
+
+                <!-- Card container for the task form section -->
+                <div class="card">
+                    <!-- Title of the card showing "Add New Task" -->
+                    <div class="card-title">Add New Task</div>
+
+                    <!-- Form element for collecting task information -->
+                    <form>
+                        <!-- Form group wrapper for task name input -->
+                        <div class="form-group">
+                            <!-- Label for task name field -->
+                            <label class="form-label">Task Name</label>
+                            <!-- Text input field for entering task name -->
+                            <input type="text" class="form-input" placeholder="Enter task name..." />
+                        </div>
+
+                        <!-- Flexbox row containing two form fields side by side -->
+                        <div class="form-row">
+                            <!-- Form group for task deadline date picker -->
+                            <div class="form-group">
+                                <!-- Label for deadline date field -->
+                                <label class="form-label">Deadline</label>
+                                <!-- Date input field for selecting deadline -->
+                                <input type="date" class="form-input" />
+                            </div>
+                            
+                            <!-- Form group for task priority selector -->
+                            <div class="form-group">
+                                <!-- Label for priority dropdown -->
+                                <label class="form-label">Priority</label>
+                                <!-- Dropdown select for choosing priority level -->
+                                <select class="form-input">
+                                    <!-- Disabled placeholder option -->
+                                    <option>Select priority</option>
+                                    <!-- High priority option -->
+                                    <option>High</option>
+                                    <!-- Medium priority option -->
+                                    <option>Medium</option>
+                                    <!-- Low priority option -->
+                                    <option>Low</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Button to submit and add the task -->
+                        <button type="button" class="form-button">Add Task</button>
+                    </form>
+                </div>
+
+                <!-- ==========================================
+                     👨‍💻 MEMBER 3 — HARSHIT
+                     📋 TASK LIST
+                     ========================================== -->
+
+                <!-- TASK LIST SECTION - Displays all user tasks -->
+
+                <!-- Card container for the task list -->
+                <div class="card">
+                    <!-- Title of the card showing "Your Tasks" -->
+                    <div class="card-title">Your Tasks</div>
+
+                    <!-- Flex container for all task items -->
+                    <div class="task-list">
+
+                        <!-- Single task item 1 - Physics assignment (HIGH priority, incomplete) -->
+                        <div class="task-item">
+                            <!-- Checkbox to mark task as completed -->
+                            <input type="checkbox" class="task-checkbox" />
+                            <!-- Container for task information -->
+                            <div class="task-info">
+                                <!-- Task title/name -->
+                                <div class="task-name">Complete physics assignment chapter 7</div>
+                                <!-- Task metadata row with due date and priority badge -->
+                                <div class="task-meta">
+                                    <!-- Due date display -->
+                                    <span>Due: Mar 28, 2025</span>
+                                    <!-- Priority badge with HIGH priority color -->
+                                    <span class="priority-badge priority-high">HIGH</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single task item 2 - Math exam (HIGH priority, incomplete) -->
+                        <div class="task-item">
+                            <!-- Checkbox to mark task as completed -->
+                            <input type="checkbox" class="task-checkbox" />
+                            <!-- Container for task information -->
+                            <div class="task-info">
+                                <!-- Task title/name -->
+                                <div class="task-name">Study for math midterm exam</div>
+                                <!-- Task metadata row with due date and priority badge -->
+                                <div class="task-meta">
+                                    <!-- Due date display -->
+                                    <span>Due: Mar 30, 2025</span>
+                                    <!-- Priority badge with HIGH priority color -->
+                                    <span class="priority-badge priority-high">HIGH</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single task item 3 - English reading (MEDIUM priority, COMPLETED) -->
+                        <div class="task-item completed">
+                            <!-- Checkbox to mark task as completed - checked by default -->
+                            <input type="checkbox" class="task-checkbox" checked />
+                            <!-- Container for task information -->
+                            <div class="task-info">
+                                <!-- Task title/name -->
+                                <div class="task-name">Read chapter 5 - English literature</div>
+                                <!-- Task metadata row with due date and priority badge -->
+                                <div class="task-meta">
+                                    <!-- Due date display -->
+                                    <span>Due: Mar 25, 2025</span>
+                                    <!-- Priority badge with MEDIUM priority color -->
+                                    <span class="priority-badge priority-medium">MEDIUM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single task item 4 - Group project (MEDIUM priority, incomplete) -->
+                        <div class="task-item">
+                            <!-- Checkbox to mark task as completed -->
+                            <input type="checkbox" class="task-checkbox" />
+                            <!-- Container for task information -->
+                            <div class="task-info">
+                                <!-- Task title/name -->
+                                <div class="task-name">Group project - research and planning phase</div>
+                                <!-- Task metadata row with due date and priority badge -->
+                                <div class="task-meta">
+                                    <!-- Due date display -->
+                                    <span>Due: Apr 2, 2025</span>
+                                    <!-- Priority badge with MEDIUM priority color -->
+                                    <span class="priority-badge priority-medium">MEDIUM</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single task item 5 - Biology lab (HIGH priority, COMPLETED) -->
+                        <div class="task-item completed">
+                            <!-- Checkbox to mark task as completed - checked by default -->
+                            <input type="checkbox" class="task-checkbox" checked />
+                            <!-- Container for task information -->
+                            <div class="task-info">
+                                <!-- Task title/name -->
+                                <div class="task-name">Submit biology lab report</div>
+                                <!-- Task metadata row with due date and priority badge -->
+                                <div class="task-meta">
+                                    <!-- Due date display -->
+                                    <span>Due: Mar 24, 2025</span>
+                                    <!-- Priority badge with HIGH priority color -->
+                                    <span class="priority-badge priority-high">HIGH</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Single task item 6 - History presentation (LOW priority, incomplete) -->
+                        <div class="task-item">
+                            <!-- Checkbox to mark task as completed -->
+                            <input type="checkbox" class="task-checkbox" />
+                            <!-- Container for task information -->
+                            <div class="task-info">
+                                <!-- Task title/name -->
+                                <div class="task-name">Prepare presentation slides for history class</div>
+                                <!-- Task metadata row with due date and priority badge -->
+                                <div class="task-meta">
+                                    <!-- Due date display -->
+                                    <span>Due: Apr 5, 2025</span>
+                                    <!-- Priority badge with LOW priority color -->
+                                    <span class="priority-badge priority-low">LOW</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ==========================================
+                 👨‍💻 MEMBER 4 — DIVANSHU
+                 📊 SIDEBAR + LAYOUT + FOOTER
+                 ========================================== -->
+
+            <!-- SIDEBAR SECTION - Right column with stats, progress, and upcoming deadlines -->
+
+            <!-- Right sidebar containing stat boxes, progress bars, and deadlines -->
+            <div class="sidebar">
+
+                <!-- QUICK STATS CARD - Shows summary metrics -->
+                <div class="card">
+                    <!-- Card title showing "Quick Stats" -->
+                    <div class="card-title">Quick Stats</div>
+
+                    <!-- Stat box showing number of active tasks -->
+                    <div class="stat-box" style="margin-bottom: 20px;">
+                        <!-- Large number displaying active task count -->
+                        <div class="stat-number">4</div>
+                        <!-- Label for the stat -->
+                        <div class="stat-label">Active Tasks</div>
+                    </div>
+
+                    <!-- Stat box showing number of completed tasks -->
+                    <div class="stat-box" style="margin-bottom: 20px;">
+                        <!-- Large number displaying completed task count -->
+                        <div class="stat-number">2</div>
+                        <!-- Label for the stat -->
+                        <div class="stat-label">Completed</div>
+                    </div>
+
+                    <!-- Stat box showing total number of tasks -->
+                    <div class="stat-box">
+                        <!-- Large number displaying total task count -->
+                        <div class="stat-number">6</div>
+                        <!-- Label for the stat -->
+                        <div class="stat-label">Total Tasks</div>
+                    </div>
+                </div>
+
+                <!-- PROGRESS CARD - Shows completion progress bars -->
+                <div class="card">
+                    <!-- Card title showing "Progress" -->
+                    <div class="card-title">Progress</div>
+
+                    <!-- Progress item 1 - Overall completion rate -->
+                    <div class="progress-item">
+                        <!-- Row containing label and percentage -->
+                        <div class="progress-label">
+                            <!-- Label text for overall completion -->
+                            <span>Overall Completion</span>
+                            <!-- Percentage value display -->
+                            <span>33%</span>
+                        </div>
+                        <!-- Bar background container -->
+                        <div class="progress-bar">
+                            <!-- Filled portion of progress bar at 33% width -->
+                            <div class="progress-fill" style="width: 33%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress item 2 - This week's completion rate -->
+                    <div class="progress-item">
+                        <!-- Row containing label and percentage -->
+                        <div class="progress-label">
+                            <!-- Label text for this week's progress -->
+                            <span>This Week</span>
+                            <!-- Percentage value display -->
+                            <span>50%</span>
+                        </div>
+                        <!-- Bar background container -->
+                        <div class="progress-bar">
+                            <!-- Filled portion of progress bar at 50% width -->
+                            <div class="progress-fill" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Progress item 3 - High priority task completion rate -->
+                    <div class="progress-item">
+                        <!-- Row containing label and percentage -->
+                        <div class="progress-label">
+                            <!-- Label text for high priority tasks progress -->
+                            <span>High Priority Tasks</span>
+                            <!-- Percentage value display -->
+                            <span>25%</span>
+                        </div>
+                        <!-- Bar background container -->
+                        <div class="progress-bar">
+                            <!-- Filled portion of progress bar at 25% width -->
+                            <div class="progress-fill" style="width: 25%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPCOMING DEADLINES CARD - Shows nearest task deadlines -->
+                <div class="card">
+                    <!-- Card title showing "Upcoming Deadlines" -->
+                    <div class="card-title">Upcoming Deadlines</div>
+
+                    <!-- Deadline item 1 - Physics Assignment -->
+                    <div class="task-item" style="margin-bottom: 15px;">
+                        <!-- Container for deadline task information -->
+                        <div class="task-info">
+                            <!-- Deadline task name without checkbox -->
+                            <div class="task-name" style="margin-bottom: 2px;">Physics Assignment</div>
+                            <!-- Task deadline date -->
+                            <div class="task-meta">
+                                <!-- Deadline date display -->
+                                <span>Mar 28, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deadline item 2 - Math Exam -->
+                    <div class="task-item" style="margin-bottom: 15px;">
+                        <!-- Container for deadline task information -->
+                        <div class="task-info">
+                            <!-- Deadline task name without checkbox -->
+                            <div class="task-name" style="margin-bottom: 2px;">Math Exam</div>
+                            <!-- Task deadline date -->
+                            <div class="task-meta">
+                                <!-- Deadline date display -->
+                                <span>Mar 30, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deadline item 3 - Group Project -->
+                    <div class="task-item">
+                        <!-- Container for deadline task information -->
+                        <div class="task-info">
+                            <!-- Deadline task name without checkbox -->
+                            <div class="task-name" style="margin-bottom: 2px;">Group Project Due</div>
+                            <!-- Task deadline date -->
+                            <div class="task-meta">
+                                <!-- Deadline date display -->
+                                <span>Apr 2, 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PAGE FOOTER - Bottom section with copyright information -->
+
+    <!-- Footer container with copyright text -->
+    <footer>
+        <!-- Copyright and branding text -->
+        <p>&copy; 2025 FocusBoard - Student Productivity App. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

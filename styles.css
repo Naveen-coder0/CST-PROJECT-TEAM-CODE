@@ -1,0 +1,682 @@
+/* ========== UNIVERSAL RESET STYLES ========== */
+/* Remove default margins, padding, and set box-sizing for all elements */
+* {
+    /* Removes default margins from all elements */
+    margin: 0;
+    /* Removes default padding from all elements */
+    padding: 0;
+    /* Includes padding and borders in width/height calculations */
+    box-sizing: border-box;
+}
+
+/* ========== BODY AND GLOBAL STYLES ========== */
+/* Global styling for the entire page */
+body {
+    /* Sets the font family to Outfit with sans-serif fallback */
+    font-family: 'Outfit', sans-serif;
+    /* Creates a diagonal gradient background from dark slate blue to indigo */
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    /* Ensures page fills the entire viewport height */
+    min-height: 100vh;
+    /* Sets default text color to light gray-blue */
+    color: #e2e8f0;
+    /* Sets line spacing to 1.6 for improved text readability */
+    line-height: 1.6;
+    /* Smooths font rendering on webkit browsers (Chrome, Safari) */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================
+   👨‍💻 MEMBER 1 — MAKKER
+   🔝 NAVBAR + HEADER
+   ========================================== */
+
+/* ========== NAVIGATION BAR SECTION ========== */
+/* Navigation bar container with dark semi-transparent background and blur effect */
+nav {
+    /* Sets semi-transparent dark background color for the navbar */
+    background: rgba(15, 23, 42, 0.6);
+    /* Creates a blur effect on the background for frosted glass appearance */
+    backdrop-filter: blur(12px);
+    /* webkit version of backdrop-filter for browser compatibility */
+    -webkit-backdrop-filter: blur(12px);
+    /* Adds a subtle light border at the bottom of navbar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    /* Adds padding inside the navbar (top/bottom and left/right) */
+    padding: 18px 40px;
+    /* Uses flexbox layout for horizontal arrangement */
+    display: flex;
+    /* Spaces items apart with space-between layout */
+    justify-content: space-between;
+    /* Vertically centers items in the navbar */
+    align-items: center;
+    /* Makes navbar stick to the top when scrolling */
+    position: sticky;
+    /* Position navbar at the very top of the page */
+    top: 0;
+    /* Ensures navbar stays above other content */
+    z-index: 100;
+}
+
+/* ========== NAVBAR TITLE/LOGO ========== */
+/* Styling for the FocusBoard app title in the navbar */
+.navbar-title {
+    /* Sets the size of the title text */
+    font-size: 24px;
+    /* Makes the text bold and prominent */
+    font-weight: 700;
+    /* Creates a gradient effect from blue to purple */
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    /* Clips the gradient to the text shape */
+    -webkit-background-clip: text;
+    /* Standard property to clip gradient to text */
+    background-clip: text;
+    /* Makes text transparent so the gradient shows through */
+    color: transparent;
+    /* Tightens the spacing between letters */
+    letter-spacing: -0.5px;
+}
+
+/* ========== NAVIGATION LINKS ========== */
+/* Container for navigation menu links */
+.nav-links {
+    /* Uses flexbox to arrange links horizontally */
+    display: flex;
+    /* Adds space between each navigation link */
+    gap: 35px;
+    /* Removes the default bullet points from list */
+    list-style: none;
+}
+
+/* Individual navigation link styling */
+.nav-links a {
+    /* Removes the underline from links */
+    text-decoration: none;
+    /* Sets link color to gray-blue */
+    color: #94a3b8;
+    /* Makes link text slightly bold */
+    font-weight: 500;
+    /* Sets the size of link text */
+    font-size: 15px;
+    /* Smoothly transitions all properties when hovering */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for navigation links */
+.nav-links a:hover {
+    /* Changes link color to light blue when hovered */
+    color: #e0f2fe;
+    /* Adds a subtle blue glow effect behind the text on hover */
+    text-shadow: 0 0 8px rgba(96, 165, 250, 0.4);
+}
+
+/* ========== PAGE TITLE AND SUBTITLE ========== */
+/* Main page heading styling */
+.page-title {
+    /* Sets large size for the main title */
+    font-size: 36px;
+    /* Makes the title bold and prominent */
+    font-weight: 700;
+    /* Reduces spacing between letters slightly */
+    letter-spacing: -1px;
+    /* Adds space below the title */
+    margin-bottom: 8px;
+    /* Sets title color to white */
+    color: #f8fafc;
+}
+
+/* Subtitle text below main title */
+.page-subtitle {
+    /* Sets subtitle text color to muted gray-blue */
+    color: #94a3b8;
+    /* Sets subtitle font size */
+    font-size: 16px;
+    /* Adds significant space below the subtitle */
+    margin-bottom: 40px;
+}
+
+/* ==========================================
+   👨‍💻 MEMBER 2 — NAVEEN
+   📝 ADD TASK FORM
+   ========================================== */
+
+/* ========== FORM SECTION STYLES ========== */
+/* Wrapper for each form field with bottom margin for spacing */
+.form-group {
+    /* Adds space below each form group */
+    margin-bottom: 20px;
+}
+
+/* Styling for form field labels */
+.form-label {
+    /* Displays label as a block element for full width */
+    display: block;
+    /* Sets small font size for labels */
+    font-size: 13px;
+    /* Makes label text slightly bold */
+    font-weight: 500;
+    /* Adds space below the label */
+    margin-bottom: 8px;
+    /* Sets label color to light gray */
+    color: #cbd5e1;
+    /* Adds spacing between letters in the label */
+    letter-spacing: 0.5px;
+    /* Transforms text to uppercase */
+    text-transform: uppercase;
+}
+
+/* Styling for text input and select elements */
+.form-input {
+    /* Makes input take full width of its container */
+    width: 100%;
+    /* Adds internal spacing around text in input */
+    padding: 14px 16px;
+    /* Sets semi-transparent dark background for input */
+    background: rgba(15, 23, 42, 0.5);
+    /* Adds subtle light border around input */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Rounds the corners of the input field */
+    border-radius: 10px;
+    /* Sets input text color to white */
+    color: #f8fafc;
+    /* Sets font size for input text */
+    font-size: 15px;
+    /* Uses same font family as rest of page */
+    font-family: 'Outfit', sans-serif;
+    /* Smoothly transitions properties on interaction */
+    transition: all 0.2s ease;
+}
+
+/* Styling when input field is focused/clicked */
+.form-input:focus {
+    /* Removes default browser outline */
+    outline: none;
+    /* Changes border color to indigo on focus */
+    border-color: #818cf8;
+    /* Darkens background slightly on focus */
+    background: rgba(15, 23, 42, 0.8);
+    /* Adds subtle indigo glow around the input */
+    box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2);
+}
+
+/* ========== FORM ROW LAYOUT ========== */
+/* Container for input fields placed side-by-side */
+.form-row {
+    /* Uses flexbox to arrange fields horizontally */
+    display: flex;
+    /* Adds space between the two fields */
+    gap: 20px;
+}
+
+/* Form groups inside a row take equal space */
+.form-row .form-group {
+    /* Takes up equal share of available space */
+    flex: 1;
+}
+
+/* ========== FORM BUTTON ========== */
+/* Styling for the "Add Task" button */
+.form-button {
+    /* Makes button take full width of container */
+    width: 100%;
+    /* Adds internal padding around button text */
+    padding: 14px;
+    /* Creates gradient background from indigo to purple */
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    /* Removes default button border */
+    border: none;
+    /* Sets button text color to white */
+    color: white;
+    /* Sets button text font size */
+    font-size: 15px;
+    /* Makes button text bold and prominent */
+    font-weight: 600;
+    /* Rounds the corners of the button */
+    border-radius: 10px;
+    /* Changes cursor to pointer on hover */
+    cursor: pointer;
+    /* Smoothly transitions all properties with custom easing */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Adds shadow beneath the button for depth */
+    box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+    /* Uses same font family as rest of page */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Button effect when hovering over it */
+.form-button:hover {
+    /* Slightly moves button up on hover */
+    transform: translateY(-2px);
+    /* Increases shadow size on hover for lifting effect */
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Button effect when actively clicked */
+.form-button:active {
+    /* Slightly moves button down when clicked */
+    transform: translateY(1px);
+    /* Reduces shadow size when pressed */
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.4);
+}
+
+/* ==========================================
+   👨‍💻 MEMBER 3 — HARSHIT
+   📋 TASK LIST
+   ========================================== */
+
+/* ========== TASK LIST SECTION ========== */
+/* Container for displaying all task items */
+.task-list {
+    /* Uses flexbox for vertical stacking of tasks */
+    display: flex;
+    /* Stacks items vertically (one per row) */
+    flex-direction: column;
+    /* Adds space between each task item */
+    gap: 12px;
+}
+
+/* ========== INDIVIDUAL TASK ITEM STYLING ========== */
+/* Wrapper for each task item with checkbox and info */
+.task-item {
+    /* Uses flexbox to align checkbox and task info horizontally */
+    display: flex;
+    /* Vertically centers the checkbox and task info */
+    align-items: center;
+    /* Adds internal padding inside the task item */
+    padding: 16px 20px;
+    /* Sets semi-transparent light background */
+    background: rgba(255, 255, 255, 0.03);
+    /* Adds subtle border around the task item */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Rounds corners of the task item */
+    border-radius: 12px;
+    /* Smoothly transitions all properties */
+    transition: all 0.2s ease;
+}
+
+/* Hover effect for task items */
+.task-item:hover {
+    /* Slightly lightens background on hover */
+    background: rgba(255, 255, 255, 0.06);
+    /* Slightly moves task item to the right on hover */
+    transform: translateX(4px);
+    /* Adds subtle shadow beneath the task item on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== TASK CHECKBOX ========== */
+/* Styling for the checkbox input in each task */
+.task-checkbox {
+    /* Fixed width for the checkbox */
+    width: 20px;
+    /* Fixed height for the checkbox */
+    height: 20px;
+    /* Adds space to the right of checkbox */
+    margin-right: 16px;
+    /* Changes cursor to pointer on hover */
+    cursor: pointer;
+    /* Prevents checkbox from shrinking when space is tight */
+    flex-shrink: 0;
+    /* Changes checkbox color to indigo when checked */
+    accent-color: #818cf8;
+}
+
+/* ========== TASK INFORMATION SECTION ========== */
+/* Container for task name and metadata */
+.task-info {
+    /* Takes up remaining space after checkbox */
+    flex: 1;
+}
+
+/* ========== TASK NAME/TITLE ========== */
+/* Styling for the task title text */
+.task-name {
+    /* Sets font size for task title */
+    font-size: 15px;
+    /* Makes task title text slightly bold */
+    font-weight: 500;
+    /* Sets task name color to light gray */
+    color: #f1f5f9;
+    /* Adds space below the task name */
+    margin-bottom: 6px;
+    /* Smoothly transitions properties */
+    transition: all 0.2s ease;
+}
+
+/* Styling for completed tasks - strikethrough effect */
+.task-item.completed .task-name {
+    /* Adds a line through completed task text */
+    text-decoration: line-through;
+    /* Changes completed task text color to muted gray */
+    color: #64748b;
+}
+
+/* ========== TASK METADATA ========== */
+/* Container for task due date and priority badge */
+.task-meta {
+    /* Uses flexbox to space date and badge apart */
+    display: flex;
+    /* Pushes badge to the right side */
+    justify-content: space-between;
+    /* Vertically centers items in the metadata row */
+    align-items: center;
+    /* Sets small font size for metadata text */
+    font-size: 13px;
+    /* Sets metadata text color to muted gray-blue */
+    color: #94a3b8;
+}
+
+/* ========== PRIORITY BADGE ========== */
+/* Common styling for all priority badges */
+.priority-badge {
+    /* Uses flexbox for centered content */
+    display: inline-flex;
+    /* Centers text vertically within badge */
+    align-items: center;
+    /* Centers text horizontally within badge */
+    justify-content: center;
+    /* Adds internal padding around badge text */
+    padding: 4px 10px;
+    /* Makes badge pill-shaped */
+    border-radius: 20px;
+    /* Sets very small font size for badge text */
+    font-size: 11px;
+    /* Makes badge text bold and prominent */
+    font-weight: 600;
+    /* Adds spacing between letters in badge */
+    letter-spacing: 0.5px;
+}
+
+/* ========== HIGH PRIORITY BADGE ========== */
+/* Styling for HIGH priority badges (red theme) */
+.priority-high {
+    /* Sets semi-transparent red background */
+    background: rgba(239, 68, 68, 0.15);
+    /* Sets badge text color to light red/pink */
+    color: #fca5a5;
+    /* Adds red border around badge */
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+/* ========== MEDIUM PRIORITY BADGE ========== */
+/* Styling for MEDIUM priority badges (amber theme) */
+.priority-medium {
+    /* Sets semi-transparent amber/yellow background */
+    background: rgba(245, 158, 11, 0.15);
+    /* Sets badge text color to light yellow */
+    color: #fcd34d;
+    /* Adds amber border around badge */
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* ========== LOW PRIORITY BADGE ========== */
+/* Styling for LOW priority badges (green theme) */
+.priority-low {
+    /* Sets semi-transparent green background */
+    background: rgba(16, 185, 129, 0.15);
+    /* Sets badge text color to light green */
+    color: #6ee7b7;
+    /* Adds green border around badge */
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* ==========================================
+   👨‍💻 MEMBER 4 — DIVANSHU
+   📊 SIDEBAR + LAYOUT + FOOTER
+   ========================================== */
+
+/* ========== PAGE LAYOUT AND CONTAINER ========== */
+/* Main container that centers and limits max width of content */
+.container {
+    /* Sets maximum width so content doesn't stretch too wide */
+    max-width: 1200px;
+    /* Centers the container horizontally on the page */
+    margin: 0 auto;
+    /* Adds padding on all sides inside the container */
+    padding: 40px 20px;
+}
+
+/* ========== CONTENT WRAPPER - TWO COLUMN LAYOUT ========== */
+/* Wrapper that splits page into main content and sidebar columns */
+.content-wrapper {
+    /* Uses flexbox to arrange columns */
+    display: flex;
+    /* Adds space between main column and sidebar */
+    gap: 40px;
+    /* Adds space above the content wrapper */
+    margin-top: 10px;
+}
+
+/* ========== MAIN COLUMN - Left side content ========== */
+/* Left column containing form and task list */
+.main-column {
+    /* Takes up 2/3 of available space (2 out of 3 total flex units) */
+    flex: 2;
+}
+
+/* ========== SIDEBAR - Right side content ========== */
+/* Right column containing stats, progress, and deadlines */
+.sidebar {
+    /* Takes up 1/3 of available space (1 out of 3 total flex units) */
+    flex: 1;
+    /* Uses flexbox for vertical stacking of cards */
+    display: flex;
+    /* Stacks sidebar cards vertically */
+    flex-direction: column;
+    /* Adds space between each card in the sidebar */
+    gap: 30px;
+}
+
+/* ========== CARD COMPONENT / CONTAINER ========== */
+/* Reusable card component for sections like form, task list, stats */
+.card {
+    /* Sets semi-transparent dark background */
+    background: rgba(30, 41, 59, 0.4);
+    /* Creates frosted glass blur effect on the background */
+    backdrop-filter: blur(16px);
+    /* webkit version of backdrop-filter for browser support */
+    -webkit-backdrop-filter: blur(16px);
+    /* Adds subtle light border around the card */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Rounds corners of the card */
+    border-radius: 16px;
+    /* Adds internal spacing inside the card */
+    padding: 28px;
+    /* Adds shadow beneath the card for depth */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    /* Adds space below each card */
+    margin-bottom: 30px;
+    /* Smoothly transitions transform and shadow properties */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ========== CARD TITLE ========== */
+/* Styling for card section titles */
+.card-title {
+    /* Sets font size for card titles */
+    font-size: 18px;
+    /* Makes card title text bold */
+    font-weight: 600;
+    /* Adds space below the title */
+    margin-bottom: 24px;
+    /* Sets title color to white */
+    color: #f8fafc;
+    /* Makes title display as inline block for underline styling */
+    display: inline-block;
+    /* Adds indigo colored underline below title */
+    border-bottom: 2px solid #818cf8;
+    /* Adds space between text and underline */
+    padding-bottom: 4px;
+}
+
+/* ========== STAT BOXES ========== */
+/* Container for displaying a single statistic */
+.stat-box {
+    /* Uses flexbox to center content */
+    display: flex;
+    /* Stacks stat number and label vertically */
+    flex-direction: column;
+    /* Horizontally centers the content */
+    align-items: center;
+    /* Vertically centers the content */
+    justify-content: center;
+    /* Sets semi-transparent dark background */
+    background: rgba(15, 23, 42, 0.4);
+    /* Adds subtle light border around stat box */
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    /* Rounds corners of the stat box */
+    border-radius: 12px;
+    /* Adds internal padding */
+    padding: 24px;
+    /* No margin by default (overridden by inline styles) */
+    margin-bottom: 0;
+    /* Smoothly transitions the transform property */
+    transition: transform 0.2s ease;
+}
+
+/* Scale up effect when hovering over stat box */
+.stat-box:hover {
+    /* Slightly enlarges the stat box on hover */
+    transform: scale(1.02);
+}
+
+/* ========== STAT NUMBER ========== */
+/* Large number display in stat boxes */
+.stat-number {
+    /* Sets very large font size for the number */
+    font-size: 38px;
+    /* Makes the number bold and prominent */
+    font-weight: 700;
+    /* Creates gradient color from purple to blue */
+    background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+    /* Clips the gradient to the text shape */
+    -webkit-background-clip: text;
+    /* Standard property to clip gradient to text */
+    background-clip: text;
+    /* Makes text transparent so gradient shows through */
+    color: transparent;
+    /* Adds space below the number before the label */
+    margin-bottom: 4px;
+}
+
+/* ========== STAT LABEL ========== */
+/* Text label below the stat number */
+.stat-label {
+    /* Sets small font size for the label text */
+    font-size: 13px;
+    /* Makes label text slightly bold */
+    font-weight: 500;
+    /* Sets label color to muted gray-blue */
+    color: #94a3b8;
+    /* Transforms label text to uppercase */
+    text-transform: uppercase;
+    /* Adds spacing between letters in label */
+    letter-spacing: 1px;
+}
+
+/* ========== PROGRESS TRACKING SECTION ========== */
+/* Container for each progress item (label, bar) */
+.progress-item {
+    /* Adds space below each progress item */
+    margin-bottom: 24px;
+}
+
+/* Remove margin from last progress item */
+.progress-item:last-child {
+    /* No margin on the last progress item */
+    margin-bottom: 0;
+}
+
+/* ========== PROGRESS LABEL ========== */
+/* Row containing progress description and percentage */
+.progress-label {
+    /* Uses flexbox to spread items apart */
+    display: flex;
+    /* Pushes percentage to the right side */
+    justify-content: space-between;
+    /* Sets font size for the label text */
+    font-size: 14px;
+    /* Makes label text slightly bold */
+    font-weight: 500;
+    /* Adds space below the label */
+    margin-bottom: 10px;
+    /* Sets label color to light gray */
+    color: #cbd5e1;
+}
+
+/* ========== PROGRESS BAR CONTAINER ========== */
+/* Background bar container that holds the progress fill */
+.progress-bar {
+    /* Makes bar take full width of container */
+    width: 100%;
+    /* Sets height of the progress bar */
+    height: 10px;
+    /* Sets dark background color for the bar */
+    background: rgba(15, 23, 42, 0.8);
+    /* Adds shadow inside the bar for depth */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Makes bar ends rounded */
+    border-radius: 20px;
+    /* Hides any overflow from the progress fill */
+    overflow: hidden;
+}
+
+/* ========== PROGRESS FILL ========== */
+/* The colored portion that shows progress completion */
+.progress-fill {
+    /* Takes full height of the bar container */
+    height: 100%;
+    /* Creates gradient from indigo to purple for the fill */
+    background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);
+    /* Rounds the ends of the progress fill */
+    border-radius: 20px;
+    /* Adds glow effect around the progress fill */
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+    /* Smoothly animates width changes over 1 second */
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========== FOOTER ========== */
+/* Footer section at the bottom of the page */
+footer {
+    /* Centers the footer text */
+    text-align: center;
+    /* Adds padding around the footer content */
+    padding: 30px;
+    /* Sets footer text color to muted gray */
+    color: #64748b;
+    /* Sets small font size for footer text */
+    font-size: 14px;
+    /* Adds border above the footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    /* Adds large space above the footer */
+    margin-top: 60px;
+    /* Makes footer text thinner/lighter */
+    font-weight: 300;
+}
+
+/* ========== RESPONSIVE DESIGN - TABLET AND MOBILE ========== */
+/* Responsive styles for screens smaller than 768px */
+@media (max-width: 768px) {
+    /* On small screens, stack content vertically */
+    .content-wrapper {
+        /* Stacks main column and sidebar vertically */
+        flex-direction: column;
+    }
+    
+    /* Stack navbar items vertically on mobile */
+    nav {
+        /* Stacks navbar items vertically */
+        flex-direction: column;
+        /* Adds space between navbar items */
+        gap: 15px;
+        /* Reduces padding on mobile devices */
+        padding: 15px 20px;
+    }
+
+    /* Reduces space between navigation links on mobile */
+    .nav-links {
+        /* Reduces gap between mobile nav links */
+        gap: 20px;
+    }
+}
